@@ -46,6 +46,13 @@ public class Test_Task {
         assertArrayEquals(result, compresser.compress_numbers(input));
 
     }
+    @Test
+    public void Test_null() {
+        int[] result = new int[]{};//ожидаемый результат
+        int[] input = new int[]{};
+        assertArrayEquals(result, compresser.compress_numbers(input));
+
+    }
 
 
 }
