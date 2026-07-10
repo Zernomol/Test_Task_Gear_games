@@ -53,6 +53,12 @@ public class Test_Task {
         assertArrayEquals(result, compresser.compress_numbers(input));
 
     }
+    @Test
+    public void Test_with_big_numbers(){
+        int[] result = new int[]{2147483647,-2147483648};//ожидаемый результат
+        int[] input = new int[]{Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MIN_VALUE,Integer.MIN_VALUE,Integer.MIN_VALUE};
+        assertArrayEquals(result, compresser.compress_numbers(input));
+    }
 
 
 }
